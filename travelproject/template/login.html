@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+form {
+border: 3px solid #f1f1f1;
+padding:10px;
+width:50%;
+margin:10px;
+background-color:#f7e8e2fc;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.loginbtn{
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+
+        }
+
+    </style>
+</head>
+<body>
+<form action="login" method="post">
+    <h2>Login Form</h2>
+
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter your username"><br>
+    <input type="password" name="password" placeholder="Enter your password"><br>
+    <input type="submit" class="loginbtn">
+</form>
+</body>
+</html>
